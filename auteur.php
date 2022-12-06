@@ -15,7 +15,8 @@ class auteur{
     }
 
     public function addlivre($livre)
-    {
+    {   
+     
         $this->_livres[]= $livre;
     }
 
@@ -51,27 +52,16 @@ class auteur{
         return "Livre de"." ". $this->getNom(). " ". $this->getPrenom()."<br>";
     }
 
+    public function afficherbibliographie()
+        {
+            echo "Livre de". $this."<br>";
+            foreach($this->_livres as$livre)
+            {
+                echo $livre."<br>";
+            }
+        }
     
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 }

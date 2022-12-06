@@ -6,13 +6,16 @@ class livre
     private int $_nbpages;
     private int $_annparution;
     private int $_prix;
+    private Auteur $_auteur;
 
-    public function __construct(string $titre, int $nbpages, int $annparution, int $prix)
+    public function __construct(string $titre, int $nbpages, int $annparution, int $prix, Auteur $auteur)
     {
         $this->_titre = $titre;
         $this->_nbpages = $nbpages;
         $this->_annparution = $annparution;
         $this->_prix = $prix;
+        $this->_auteur = $auteur;
+        $this->_auteur->addlivre($this);
     }
 
     public function getTitre()
@@ -59,11 +62,22 @@ class livre
         return $this;
     }
 
-    
-    public function __tostring()
-
+    public function getAuteur()
     {
-        return $this->_titre. " ". "(".$this->_annparution.")".":"." ". $this->_nbpages." "."/". $this->_prix." "."€"."<br>";
+        return $this->_auteur;
+    }
+
+    public function setAuteur($auteur)
+    {
+        $this->_prix = $auteur;
+        return $this;
+    }
+
+    
+    public function __toString()
+   
+    {        
+        return $this->getTitre(). " ". "(".$this->getAnnparution().") : ". $this->getNbpages()." "."/". $this->getPrix()." "."€"."<br>";
     }
     
     

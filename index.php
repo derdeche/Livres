@@ -10,18 +10,26 @@ Vous implémenterez une méthode afficherBibliographie() qui permettra d’affic
 <?php
 
 
-/*require_once "livre.php";*/
+require_once "livre.php";
 require_once "auteur.php";
 
-$auteur1 = new auteur("King", "Stephen");
-/*$livre1 = new livre ("Ca", 1986, 1138, 20);*/
-/*$livre2 = new livre ("Simetierre", 1983, 374, 15);*/
-/*$livre3 = new livre ("Le Fléau", 1978, 823, 14);*/
-/*$livre4 = new livre ("Shining", 1977, 447, 16);*/
+$auteur1 = new Auteur("King", "Stephen");
+$livre1 = new livre ("Ca", 1986, 1138, 20, $auteur1);
+$livre2 = new livre ("Simetierre", 1983, 374, 15, $auteur1);
+$livre3 = new livre ("Le Fléau", 1978, 823, 14, $auteur1);
+$livre4 = new livre ("Shining", 1977, 447, 16, $auteur1);
 
-echo $auteur1->tostring()."<br>";
-/*echo $livres1->tostring()."<br>";*/
-/*echo $livre2->tostring()."<br>";*/
-/*echo $livre3->tostring()."<br>";*/
-/*echo $livre4->tostring()."<br>";*/
+echo $auteur1."<br>"; //like call __tostring()
+echo $livre1."<br>"; //like call __tostring()
+echo $livre2."<br>";
+echo $livre3."<br>";
+echo $livre4."<br>";
 
+
+
+
+$auteur2 = new auteur("Agatha","Christie");
+$livre1 = new livre ("Mort sur le Nil", 1937, 1512, 20,$auteur2);
+$livre2 = new livre ("Le Cheval pâle", 1983, 1489, 15,$auteur2);
+$livre3 = new livre ("La Fête du potiron", 1978, 2001, 14,$auteur2);
+$livre4 = new livre ("La Maison biscornue", 1977, 1246, 16,$auteur2);

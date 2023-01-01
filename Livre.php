@@ -1,6 +1,6 @@
 <?php
 
-class livre
+class Livre
 {
     private string $_titre;
     private int $_nbpages;

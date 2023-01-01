@@ -1,6 +1,6 @@
 <?php
 
-class auteur{
+class Auteur{
 
     private string $_nom;
     private string $_prenom;

@@ -52,6 +52,10 @@ class Auteur{
         return "Livre de"." ". $this->getNom(). " ". $this->getPrenom()."<br>";
     }
 
+
+    public function getLivre()
+
+    {                                   /*FONCTION POUR AFFICHER BIBLIOGRAPHIE AUTEUR*/
     public function afficherbibliographie()
         {
             echo "Livre de". $this."<br>";

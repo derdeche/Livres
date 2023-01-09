@@ -73,7 +73,7 @@ class Livre
         return $this;
     }
 
-    
+                                            /*AFFICHAGE LIVRE*/
     public function __toString()
    
     {        

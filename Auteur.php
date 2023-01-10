@@ -53,7 +53,7 @@ class Auteur{
     }
 
 
-    public function getLivre()
+    
 
                                   /*FONCTION POUR AFFICHER BIBLIOGRAPHIE AUTEUR*/
     public function afficherbibliographie()

@@ -55,7 +55,7 @@ class Auteur{
 
     public function getLivre()
 
-    {                                   /*FONCTION POUR AFFICHER BIBLIOGRAPHIE AUTEUR*/
+                                  /*FONCTION POUR AFFICHER BIBLIOGRAPHIE AUTEUR*/
     public function afficherbibliographie()
         {
             echo "Livre de". $this."<br>";
